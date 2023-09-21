@@ -9,16 +9,31 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Grid {
+            GridRow {
+                ColorShiftView(speed: .verySlow)
+            }
+            
+            GridRow {
+                ColorShiftView(speed: .slow)
+            }
+            
+            GridRow {
+                ColorShiftView(speed: .fast)
+            }
+            
+            GridRow {
+                ColorShiftView(speed: .veryFast)
+            }
+            
+            GridRow {
+                ColorShiftView(speed: .extremelyFast)
+            }
         }
-        .padding()
+        
     }
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}
